@@ -1,0 +1,62 @@
+.trigger {
+  position: relative;
+  background: #FFF;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  /*icon replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  z-index:22;
+}
+
+.trigger span,
+.trigger span::before,
+.trigger span::after {
+  position: absolute;
+  width: 44px;
+  height: 3px;
+  background: #31AA39;
+  border-radius: 4px;
+}
+
+.trigger span {
+  top: calc(50% - 2px);
+  left: calc(50% - 22px);
+  transition: transform 0.3s;
+}
+
+.trigger span::before,
+.trigger span::after {
+  content: "";
+  left: 0;
+  height:4px;
+  transition: transform 0.4s, width 0.4s, opacity 0.1s;;
+}
+
+.trigger span::before {
+  bottom: 12px;
+}
+
+.trigger span::after {
+  top: 12px;
+}
+/*****  FLECHE *****/
+.fleche .trigger:hover span {
+  transform: rotate(180deg);
+}
+.fleche .trigger:hover span::before {
+  transform: translate(-2px, 5px) rotate(-45deg);
+  width: 50%;
+}
+.fleche .trigger:hover span::after {
+  transform: rotate(45deg);
+  transform: translate(-2px, -5px) rotate(45deg);
+  width: 50%;
+}
+

@@ -1,0 +1,134 @@
+/**
+ * styles.scss
+ * ---
+ * Main `sass` file. Import here `sass` files
+ */
+
+/* Modules */
+@import "modules/variables";
+@import "modules/mixins";
+@import "modules/fonts";
+
+/* Partials */
+@import "partials/reset";
+@import "partials/wordpress";
+@import "partials/utils";
+@import "partials/wrapper";
+@import "partials/header";
+@import "partials/nav";
+/*@import "partials/menu";*/
+@import "partials/menur";
+@import "partials/menur-trigger";
+@import "partials/preload";
+@import "partials/sidebar";
+@import "partials/footer";
+@import "partials/print";
+
+
+body {
+    background-color:red;
+    transition: all 0.3s cubic-bezier(0.52, 0.55, 0.55, 1);
+}
+
+.lide-img {
+    width: 100vw;
+    padding:0px;
+    
+}
+.bxslider {
+    padding:0px; 
+    margin:0px; 
+}
+
+.hide {
+     display:none;
+}
+
+.social-vl {
+     display:flex;
+     align-items:center;
+     justify-content:center;
+     margin: auto 0;
+     width:100%;
+     i {
+         margin:8px;
+         color:#fff;
+         padding:5px;
+         &:hover {
+             cursor:pointer;
+             color:tomato;
+         }
+     }
+}
+
+    .sub-menu {
+       //transform:translateY(-123px);
+       overflow: hidden;
+       height: 0px;
+      transition: all 0.3s cubic-bezier(0.52, 0.55, 0.55, 1);
+
+    }
+
+.menu-item-has-children:hover {
+    .sub-menu {
+       height: 130px;
+      transition: all 0.3s cubic-bezier(0.52, 0.55, 0.55, 1);
+       //transform:translateY(123px);
+    }
+}
+
+body > .wrapper {
+  /*display: none;*/
+}
+
+body.pg-loaded > .wrapper {
+  display: block;
+}
+
+.pg-loading-logo-header {
+     height:100vh;
+}
+
+.pg-loading-logo {
+    width: 230px;
+    position:absolute;
+    top:50%;
+    right:66%;
+    left:33%;
+    bottom:50%;
+}
+
+.bxslide img {
+     width:100vw;
+}
+
+.white-wrapper {
+    background-color: #FFF;
+}
+
+.pager-wrapper {
+    /*display: none;*/
+}
+
+.bx-viewport {
+}
+
+.top-panel {
+     background-color:#fff;
+     height: 130vh;
+     width:100vw;
+     position:absolute;
+     top:50vh;
+     z-index:444;
+}
+
+.top-panel:after {
+     content:'';
+     background-color:blue;
+     position:absolute;
+     top:0;
+}
+
+.testt {
+     color:pink;
+}
