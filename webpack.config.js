@@ -47,8 +47,12 @@ module.exports = {
       new CopyWebpackPlugin([
         {
           context: 'src',
-          from: '../**/*.php',
+          from: '**/*.html',
           to: '.'
+        },
+        {
+             from:'../**/*.php',
+             to:'./'
         }
       ]),
       new CommonsChunkPlugin({
